@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Popular</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link href="./StringQuartet.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
+</head>
+
+<body id="popular">
+
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a href="index.html"><img src="resources/together_2.png" width="160px" > </a>
+    <div class="navbar-collapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Feed</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="./popular.html">Popular</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./about.html">About</a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <ul class="navbar-nav ml-auto">
+        
+      </ul>
+    </div>
+  </nav>
+
+
+  <div id = 'popular'>
+    <div class = 'row'>
+      <!-- Popular Hash Tag -->
+      <div class = 'col-md-5'>
+        <h3 id = 'popular-title1'> Rank of Tags </h3>
+        <div id = 'popular-tag-list'>
+        </div>
+      </div>
+
+      <div class="vl"></div>
+      
+      <!-- Popular Events -->
+      <div class = 'col-md-8'>
+        <h3 id = 'popular-title2'> Popular Events </h3>
+          <!-- Make a class for better UI-->
+          <div class="pop-contents">
+            <div id = 'popular-event-list'>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+      <!-- Card Content -->
+    <div id="card-detail-modal" class="modal" style="display:None;">
+      <div class="modal-content2" id="card-detail-content">
+      </div>
+    </div>
+    
+    <!-- Tag Statistics -->
+    <div class = 'tag-stats'></div>
+</body>
+
+  <div class="se-pre-con"></div>
+  <!-- Javascript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+  <script src="./config.js"></script>
+  <script src="./database.js"></script>
+  <script src="./common.js"></script>
+  <script src="./statistics.js"></script>
+  
+  <script src="./popular.js"></script>
+</html>

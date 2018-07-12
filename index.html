@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Together</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link href="./StringQuartet.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
+</head>
+
+<body id="feed">
+
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a href="index.html"><img src="resources/together_2.png" width="160px" > </a>
+    <div class="navbar-collapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="./index.html">Feed</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./popular.html">Popular</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./about.html">About</a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <ul class="navbar-nav ml-auto">
+        
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Left tag bar -->
+  <div class="leftbar">
+    <h5 id = "feed-my-tags"> My Tags </h5>
+     <div class="search">
+        <input type="text" class="searchTerm" id="tagSearchBar" placeholder="Search">
+        <button type="submit" id="tagSearchBarSubmit" class="searchButton">
+          <i class="fa fa-search"></i>
+       </button>
+     </div>
+
+    <!-- Tag List -->
+     <div class="taglists"> 
+    </div>
+  </div>
+
+  <!-- Feed cards -->
+  <div class="contents" id="contents">
+    <button id="create"><img class="btn-img" src="resources/plus.png"></button>
+    <h3 id = 'feed-events'></h3>
+    <div class = 'event-list'>
+    </div>
+  </div>
+    <!-- Create cards -->
+    <div id="create_cards" class="modal" style="display:None;">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Create a new event</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form id="create-form" class="needs-validation" novalidate>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="create-title">Event title</label>
+                <input class="form-control form-control-lg" type="text" id="create-title" placeholder="Event title" required>
+                <div class="invalid-feedback">Please enter a title.</div>
+              </div>
+              <div class="form-group">
+                <label for="create-detail">Explain about your event</label>
+                <textarea class="form-control" id="create-detail" rows="5" placeholder="Event detail" required></textarea>
+                <div class="invalid-feedback">Please explain about your event.</div>
+              </div>
+              <div class="form-group">
+                <label for="create-datepicker">When is your event being held?</label>
+                <input class="form-control form-control-sm" id="create-datepicker" placeholder="MM/DD/YYYY" required>
+                <div class="invalid-feedback">Please choose a date.</div>
+              </div>
+              <div class="form-group">
+                <label for="create-tags1">Add tags to make other people easily search this event</label>
+                <input class="form-control form-control-sm create-tags" type="text" id="create-tags1" placeholder="Tag 1" required>
+                <input class="form-control form-control-sm create-tags" type="text" id="create-tags2" placeholder="Tag 2 (Optional)">
+                <input class="form-control form-control-sm create-tags" type="text" id="create-tags3" placeholder="Tag 3 (Optional)">
+                <div class="invalid-feedback">At least one tag is required.</div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="close_create_event_modal()">Close</button>
+              <button type="submit" class="btn btn-primary" id="create-submit">Submit an event</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  <!-- Card Content -->
+  <div id="card-detail-modal" class="modal" style="display:None;">
+    <div class="modal-content2" id="card-detail-content">
+    </div>
+  </div>
+
+  <!-- Tag alert -->
+  <div id='tag-alert' class="modal-content3" style="display:none; ">
+      <p class='tag-alert-msg' style="margin: 0; margin-left:10px; margin-top: 30px; color: black;"> You have no tags at the moment. </p>
+      <p class='tag-alert-msg' style="margin: 0; margin-left:10px; color: black;"> Please type in a tag in the search bar on your left.</p>
+  </div>
+
+
+
+</body>
+
+  <div class="se-pre-con"></div>
+  <!-- Javascript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+  <script src="./config.js"></script>
+  <script src="./database.js"></script>
+  <script src="./common.js"></script>
+  <script src="./statistics.js"></script>
+
+  <script src="./index.js"></script>
+  <script src="./taglist.js"></script>
+
+</html>

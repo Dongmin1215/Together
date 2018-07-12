@@ -1,0 +1,757 @@
+/* Main content */
+.main {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+
+.navbar{
+  margin: auto;
+}
+
+.navbar-collapse{
+  width:100%;
+}
+
+.navbar-nav{
+  margin: atuo;
+  margin-left:60%;
+}
+
+.nav-item{
+  margin: auto;
+  text-align: center;
+}
+
+.nav-link{
+  font-size: 20px;
+}
+
+.project_name{
+  color: white;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.row {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 1px 4px 4px 1px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    margin-top: 20px; 
+    cursor: pointer;
+}
+
+.feed-card-width {
+    width: 85%
+}
+
+.popular-card-width {
+    width: 100%
+}
+
+/* On mouse-over, add a deeper shadow */
+.contents .row:hover {
+    box-shadow: 1px 8px 8px 1px rgba(0,0,0,0.2);
+}
+
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.column{
+  float: left;
+  width: 50%;
+}
+
+.leftbar{
+  float:left; 
+  width:20%;
+  position: absolute;
+}
+
+.contents{
+  float:right; 
+  width:78%; 
+  margin-left:15px;
+  height:100vh;
+  overflow:auto;
+  padding-left:20px;
+}
+
+table {
+    border-collapse: collapse;
+  }
+
+
+table > tbody > tr {
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+    
+    }
+    
+thead> tr > td{
+border: none;
+border-bottom: 2px solid #999;
+}
+
+table thead td {
+    padding: 5px;
+}
+table tbody td {
+    padding: 5px;
+  }
+
+.search {
+  width: 70%;
+  position: relative;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid #000000;
+  padding: 5px;
+  height: 36px;
+  border-radius: 3px;
+  outline: none;
+  color: #000000;
+  font-size: 15px;
+}
+
+.searchTerm:focus{
+  color: #000000;
+}
+
+.searchButton {
+  position: absolute;  
+  right: -30px;
+  width: 40px;
+  height: 36px;
+  border: 1px solid #000000;
+  background: #000000;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+#feed-my-tags{
+  font-size: 1.4rem;
+  padding-top: 10%;
+  padding-left: 20px;
+}
+
+#feed-events{
+  font-size: 1.8rem;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.event-list{
+  margin-top: 70px;
+}
+
+.taglists{
+  margin-top: 60px;
+  position: relative;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-transition: .2s;
+
+}
+
+
+.tag-name{
+  font-size: 1rem;
+  margin-top:2px;
+  display: inline-block;
+  font-weight: normal;
+}
+
+.tags {
+  background-color:#F4CCCC;
+  margin-top: 5px;
+  margin-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  padding-left: 9px;
+  padding-right: 9px;
+  display: block;
+  text-overflow: ellipsis;
+}
+
+.btn{
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  font-size: 15px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  margin-bottom: 5px;
+
+}
+
+/* Remove blue outline when button is clicked */
+.btn:focus,.btn:active {
+   outline: none !important;
+   box-shadow: none;
+}
+
+.tagStatTags {
+  background-color:#F4CCCC;
+  opacity: 0.7;
+  display: inline-block;
+  text-align: center;
+  font-weight:bold;
+  font-size: 30px;
+  text-overflow: ellipsis;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  margin-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  padding-left: 9px;
+  padding-right: 9px;
+  border-radius:4px;
+  width: 130px;
+  height: 50px;
+}
+
+.fa-close {
+  display: none !important;
+}
+
+.tags:hover{
+  opacity: 0.7;
+  size: all;
+}
+
+
+.tags:hover h4{
+  opacity: 0.7 !important;
+}
+
+.tags:hover .fa-close{
+  display: inline-table !important;
+  opacity: 0.7;
+}
+
+
+.tags:hover .fa-close:hover{
+  display: inline-table !important;
+  opacity: 1;
+}
+
+
+
+card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Raleway";
+  line-height: 115%;
+  margin-top: 20px;
+}
+
+hr.card-line{
+  margin-top: inherit;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,.3);
+}
+
+/* card content */
+
+card-content{
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.7em;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: 'Raleway';
+  line-height: 120%;
+}
+
+tr.card-interest-title{
+  font-weight:bold;
+}
+
+.content_title{
+  height: 8%;
+  font-size: 25px;
+  margin-top: 2%;
+  margin-left: 3%
+
+}
+
+.tags_bar_content{
+  margin-left: 3%
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #F4CCCC;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #F4CCCC;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.translate_box {
+  display: inline-block;
+  float: right;
+  margin-right: 3%;
+  text-align: center;
+}
+
+.translate {
+  font-size: 17px;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+  line-height: normal;
+  margin-top: -25px;
+  margin-right: 5px;
+}
+
+.contents_detail {
+  width: 100%;
+  height: 50%;
+  padding-left: 30px;
+  padding-right: 20px;
+}
+
+.contents_date {
+  width: 100%;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 20px;
+  font-weight: bold;
+}
+
+.show_interest {
+  border-radius: 8px;
+  margin: auto;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.fa-heart{
+  color: #F4CCCC;
+}
+
+/* partition for the popular tags and events */
+#popular-title1{
+  font-size: 1.5rem;
+  padding-top: 10px;
+  padding-left: 18px;
+  padding-bottom: 17px;
+}
+
+#popular-title2{
+  font-size: 1.5rem;
+  padding-top: 10px;
+  padding-left: 0px;
+  margin-bottom: -3px;
+}
+
+.vl {
+    border-left: 2px solid #d9d9d9;
+    left: 50%;
+    height: 900px;
+    margin-left: -200px;
+    top: auto;
+}
+
+.pop-contents{
+    float:right; 
+    width:98%; 
+    margin-left:10px;
+    margin-bottom: 5px;
+}
+
+.pop-contents .row:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+.col-sm-4 {
+  border-left: 1px solid lightgray;
+}
+
+.col-sm-8 {
+  padding-top: 0.4em;
+}
+
+.date_bar {
+  height: 60px;
+}
+
+.like_bar {
+  height: 20px;
+  margin-top: -25px;
+}
+
+.tag {
+  border: 1px solid #dce0e8;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-right: 2px;
+  background-color: #dce0e8;
+  height: 28px;
+  margin-bottom: -5px;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+
+
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  height: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+.modal-content2 {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 70%;
+  height: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: slidein;
+  animation-duration: 0.3s;
+  top: 56px;
+  margin-left: 20%;
+  border-radius: 15px;
+}
+
+.modal-content3{
+  position: absolute;
+  background-color: rgba(0,0,0,0.15);
+  margin: auto;
+  padding: 0;
+  width: 40%;
+  height: 15%;
+  top: 150px;
+  margin-left: 30%;
+  margin-top: 10px;
+  border-radius: 3px;
+  z-index: 1;
+  text-align: center;
+}
+
+.tag-alert-msg{
+  margin: auto;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-right: 8px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+.tags_bar {
+  margin-top: 7px;
+  margin-bottom: 10px;
+
+}
+
+#create {
+  position: fixed;
+  z-index: 999;
+  display: block;
+  background-color: #FFFFFF;
+  border: 0;
+  margin-top:25px;
+  margin-left:59%;
+  border-color: #000000;
+  display: block;
+  cursor: pointer;
+}
+
+.btn-img {
+  color: pink;
+  border: 0;
+  width: 45px;
+  border-radius: 50px;
+  box-shadow: 0 0 1px 1px rgba(0,0,0,0.1);
+}
+
+
+/* Create page */
+.create-tags {
+  margin-bottom: 8px;
+}
+
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0.5;
+  background: url(resources/Preloader_2.gif) center no-repeat #fff;
+}
+
+
+@keyframes bake-pie {
+  from {
+    transform: rotate(0deg) translate3d(0,0,0);
+  }
+}
+
+section {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.pieID {
+  display: inline-block;
+  vertical-align: top;
+}
+.pie {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  margin: 0 30px 30px 0;
+}
+.pie::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  background: #EEE;
+  border-radius: 50%;
+  top: 50px;
+  left: 50px;
+}
+.pie::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 50%;
+  box-shadow: 0 0 3px 4px rgba(0,0,0,0.1);
+  margin: 220px auto;
+  
+}
+.slice {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  clip: rect(0px, 200px, 200px, 100px);
+  animation: bake-pie 1s;
+}
+.slice span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  clip: rect(0px, 200px, 200px, 100px);
+}
+.legend {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background: #FFF;
+  padding: 15px;
+  font-size: 13px;
+  box-shadow: 1px 1px 0 #DDD,
+              2px 2px 0 #BBB;
+}
+.legend li {
+  width: 150px;
+  height: 1.25em;
+  margin-bottom: 0.7em;
+  padding-left: 0.5em;
+  border-left: 1.25em solid black;
+}
+.legend em {
+  font-style: normal;
+}
+.legend span {
+  float: right;
+}
+
+
+
+@import "compass/css3";
+
+
+.chart {
+  display: table;
+  table-layout: fixed;
+  width: 60%;
+  max-width: 700px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  background-size: 100% 50px;
+  background-position: left top;
+  font-size:13px;
+}
+.chart li {
+  position: relative;
+  display: table-cell;
+  vertical-align: bottom;
+  height: 200px;
+}
+.chart span {
+  margin: 0 1em;
+  display: block;
+  /*background: #F4CFB0;*/
+  background: #CCF4F4;
+  opacity: 1;
+  animation: draw 1s ease-in-out;
+}
+.chart span:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  padding: 5px 1em 0;
+  display: block;
+  text-align: center;
+  content: attr(title);
+  word-wrap: break-word;
+}
+
+.showme {
+  display:none;
+}
+.bar:hover .showme{
+  display: inline;
+  z-index: -1;
+  font-size:9px;
+}
+
+@keyframes draw{
+  0%{height:0;} 
+}
+
+.card-content {
+  color: grey;
+}
+
+ul.ui-autocomplete {
+  z-index: 1100;
+}
+
+.about-title {
+  font-size: 25px;
+  text-align: center;
+}
+
+.about-body {
+  font-size: 17px;
+  text-align: center;
+}
+
+
